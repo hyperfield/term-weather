@@ -1,8 +1,10 @@
-import requests
+from script import show_weather
 
-url = 'http://wttr.in/{}?nTqum&lang=ru'
 locations = ['London', 'svo', 'Череповец']
-for loc in locations:
-  response = requests.get(url.format(loc))
-  response.raise_for_status()
-  print(response.text)
+lang = "ru"
+
+def main():
+    show_weather(locations, lang)
+
+if __name__ == '__main__':
+    main()
