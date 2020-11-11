@@ -1,9 +1,8 @@
 import requests
 
 def show_weather(locations, lang):
-  payload = {"":"nTqum", "lang": lang}
+  payload = {"nTqum":"", "lang":lang}
   url_template = 'http://wttr.in/{place}'
-  locations = ['London', 'svo', 'Череповец']
   for location in locations:
     response = requests.get(url_template.format(place=location), params=payload)
     response.raise_for_status()
