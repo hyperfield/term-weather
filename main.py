@@ -8,10 +8,9 @@ def show_weather(locations, lang):
     response.raise_for_status()
     print(response.text)
 
-locations = ['London', 'svo', 'Череповец']
-lang = "ru"
-
 def main():
+    locations = ['London', 'svo', 'Череповец']
+    lang = "ru"
     show_weather(locations, lang)
 
 if __name__ == '__main__':
